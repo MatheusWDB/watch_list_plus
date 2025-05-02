@@ -12,7 +12,7 @@ WatchList+ é um aplicativo prático para gerenciar sua lista de produções par
 - Ordenar e filtrar a lista de acordo com suas preferências.
 - Suporte a idiomas: Português (pt-BR) e Inglês (EN) (tradução gerada pelo chatGPT).
 
-# Modelo conceitual
+# Layout
 | ![0](https://github.com/user-attachments/assets/a36ed36c-3295-4446-bb03-664ca33739d7) | ![1](https://github.com/user-attachments/assets/347f764a-1f6a-4486-93cb-c8275f7d14f7) | ![2](https://github.com/user-attachments/assets/629ab8d8-3caa-4ed7-b726-15b19b4c86de) |
 |:-------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------:|
 | ![3](https://github.com/user-attachments/assets/f3e35307-a108-4c5b-a7f5-d7df0e1bbc1f) | ![4](https://github.com/user-attachments/assets/1e3db883-9dda-4d9a-a493-7251a84279df) | ![5](https://github.com/user-attachments/assets/be9bf99a-7df6-4e07-a6da-9ada991ba0c4) |
@@ -24,16 +24,25 @@ WatchList+ é um aplicativo prático para gerenciar sua lista de produções par
 - Flutter
 - Dart
 
+ <!-- # Implantação em produção -->
+
 # Como executar o projeto
 ```bash
 # clonar repositório
 git clone https://github.com/MatheusWDB/watch_list_plus.git
 
-# executar o projeto
+# Entrar na pasta do projeto
+cd watch_list_plus
+
+# Baixar dependências
+flutter pub get
+
+# Executar o projeto
 flutter run
 ```
 
 # Autor
 Matheus Wendell Dantas Bezerra
 
-https://www.linkedin.com/in/mwdb1703
+- [LinkedIn](https://www.linkedin.com/in/mwdb1703)
+- [Portfólio](https://portfolio-vwy3.onrender.com/)
