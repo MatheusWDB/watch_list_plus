@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 // ignore: unused_import
-import 'package:flutter_gen/gen_l10n/app_localization.dart';
+import 'package:watchlist_plus/l10n/app_localization.dart';
 
 enum GenreEnum {
   absent;

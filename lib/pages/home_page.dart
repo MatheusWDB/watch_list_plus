@@ -1,14 +1,12 @@
-// ignore_for_file: use_build_context_synchronously
-
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localization.dart';
 import 'package:watchlist_plus/enums/access_enum.dart';
 import 'package:watchlist_plus/enums/category_enum.dart';
 import 'package:watchlist_plus/enums/filter_enum.dart';
 import 'package:watchlist_plus/enums/sort_enum.dart';
 import 'package:watchlist_plus/enums/streaming_enum.dart';
+import 'package:watchlist_plus/l10n/app_localization.dart';
 import 'package:watchlist_plus/models/production.dart';
 import 'package:watchlist_plus/models/streaming.dart';
 import 'package:watchlist_plus/services/filtering_services.dart';
@@ -397,7 +395,9 @@ class _HomePageState extends State<HomePage> {
   }
 
   void addProduction(
-      Map<String, dynamic> productionController, BuildContext context) {
+    Map<String, dynamic> productionController,
+    BuildContext context,
+  ) {
     List<Streaming> streaming = productionController['streaming'];
 
     streaming.sort((a, b) => a.streamingService

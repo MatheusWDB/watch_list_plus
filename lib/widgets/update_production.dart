@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localization.dart';
+import 'package:watchlist_plus/l10n/app_localization.dart';
 import 'package:watchlist_plus/enums/access_enum.dart';
 import 'package:watchlist_plus/enums/category_enum.dart';
 import 'package:watchlist_plus/models/production.dart';
@@ -184,7 +184,6 @@ class _UpdateListState extends State<UpdateList> {
               return;
             }
             updateProduction(productionController, production, context);
-
             resetProductionController();
             resetError();
           },

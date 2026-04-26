@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localization.dart';
+import 'package:watchlist_plus/l10n/app_localization.dart';
 import 'package:watchlist_plus/enums/access_enum.dart';
 import 'package:watchlist_plus/enums/category_enum.dart';
 import 'package:watchlist_plus/models/streaming.dart';
@@ -161,14 +161,12 @@ class _AddProductionDialogState extends State<AddProductionDialog> {
               setState(() {
                 error['title'] = AppLocalizations.of(context)!.requiredField;
               });
-
               return;
             }
             if (productionController['category'] == CategoryEnum.absent) {
               setState(() {
                 error['category'] = AppLocalizations.of(context)!.required;
               });
-
               return;
             }
             if (productionController['streaming'].isEmpty ||
@@ -196,7 +194,7 @@ class _AddProductionDialogState extends State<AddProductionDialog> {
   }
 
   void resetProductionController() {
-    productionController['title']!.clear();
+    productionController['title'].clear();
     productionController['category'] = CategoryEnum.absent;
     productionController['streaming'].clear();
   }

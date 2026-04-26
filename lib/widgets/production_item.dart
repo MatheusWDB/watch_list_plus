@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localization.dart';
+import 'package:watchlist_plus/l10n/app_localization.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:watchlist_plus/enums/streaming_enum.dart';
 import 'package:watchlist_plus/models/production.dart';
