@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:watchlist_plus/l10n/app_localization.dart';
 import 'package:watchlist_plus/l10n/l10n.dart';
-import 'package:watchlist_plus/pages/home_page.dart';
+import 'package:watchlist_plus/screens/home_page.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
