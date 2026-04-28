@@ -2,33 +2,21 @@ import 'package:watchlist_plus/enums/access_enum.dart';
 import 'package:watchlist_plus/enums/streaming_enum.dart';
 
 class Streaming {
-  final StreamingEnum streamingService;
-  final AccessEnum accessMode;
+  final StreamingEnum service;
+  final AccessEnum access;
 
-  const Streaming({
-    required this.streamingService,
-    required this.accessMode,
-  });
+  const Streaming({required this.service, required this.access});
 
-  // Converte o objeto Streaming para um mapa (JSON)
-  Map<String, dynamic> toJson() {
-    return {
-      'streamingService': streamingService.name,
-      'accessMode': accessMode.name,
-    };
-  }
+  Map<String, dynamic> toMap() => {
+    'service': service.name,
+    'access': access.name,
+  };
 
-  // Converte um mapa (JSON) para um objeto Streaming
-  factory Streaming.fromJson(Map<String, dynamic> json) {
-    return Streaming(
-      streamingService:
-          StreamingEnum.values.firstWhere((e) => e.name == json['streamingService']),
-      accessMode: AccessEnum.values.firstWhere((e) => e.name == json['accessMode']),
-    );
-  }
+  factory Streaming.fromMap(Map<String, dynamic> map) => Streaming(
+    service: StreamingEnum.values.firstWhere((e) => e.name == map['service']),
+    access: AccessEnum.values.firstWhere((e) => e.name == map['access']),
+  );
 
   @override
-  String toString() {
-    return '$streamingService - $accessMode';
-  }
+  String toString() => '${service.displayName} - ${access.name}';
 }

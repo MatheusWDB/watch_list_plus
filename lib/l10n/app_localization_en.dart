@@ -194,4 +194,86 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get save => 'Save';
+
+  @override
+  String get appSettings => 'Settings';
+
+  @override
+  String get themeSystem => 'System';
+
+  @override
+  String get themeLight => 'Light';
+
+  @override
+  String get themeDark => 'Dark';
+
+  @override
+  String get appTheme => 'Theme';
+
+  @override
+  String get backupSecurity => 'Data Security';
+
+  @override
+  String get backupSecurityInfo =>
+      'The app saves everything locally. Use the options below to avoid losing data when switching devices.';
+
+  @override
+  String get backupExport => 'Export your data';
+
+  @override
+  String get downloadBackup => 'Download backup';
+
+  @override
+  String get shareBackup => 'Share backup';
+
+  @override
+  String get importBackup => 'Load backup';
+
+  @override
+  String get replaceData => 'Replaces all current data';
+
+  @override
+  String get confirmImport => 'Confirm Import';
+
+  @override
+  String get confirmImportMsg =>
+      'This will erase all current data and replace it with the backup. Continue?';
+
+  @override
+  String get backupSaved => 'Backup saved!';
+
+  @override
+  String get backupShared => 'Backup shared!';
+
+  @override
+  String get backupError => 'Error generating backup';
+
+  @override
+  String get importSuccess => 'Backup imported successfully!';
+
+  @override
+  String get importError => 'Error importing backup';
+
+  @override
+  String get updatedAt => 'Last updated';
+
+  @override
+  String get behavior => 'Behavior';
+
+  @override
+  String get confirmDeleteTitle => 'Confirm before deleting';
+
+  @override
+  String get confirmDeleteSubtitle =>
+      'Show a confirmation dialog before removing a title';
+
+  @override
+  String get search => 'Search';
+
+  @override
+  String get showCompletedOnHome => 'Show completed on home';
+
+  @override
+  String get showCompletedOnHomeSubtitle =>
+      'Display watched titles on the main tab';
 }

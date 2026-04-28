@@ -3,29 +3,17 @@ import 'package:watchlist_plus/l10n/app_localization.dart';
 
 enum FilterEnum {
   all,
-  watched,
-  unwatched,
   category,
   streaming,
   access;
 
   String displayNameTranslate(BuildContext context) {
-    switch (this) {
-      case FilterEnum.all:
-        return AppLocalizations.of(context)!.all;
-      case FilterEnum.watched:
-        return AppLocalizations.of(context)!.watched;
-      case FilterEnum.unwatched:
-        return AppLocalizations.of(context)!.unwatched;
-      case FilterEnum.category:
-        return AppLocalizations.of(context)!.category;
-      case FilterEnum.streaming:
-        return AppLocalizations.of(context)!.streaming;
-      case FilterEnum.access:
-        return AppLocalizations.of(context)!.accessMode;
-    }
+    final t = AppLocalizations.of(context)!;
+    return switch (this) {
+      FilterEnum.all => t.all,
+      FilterEnum.category => t.category,
+      FilterEnum.streaming => t.streaming,
+      FilterEnum.access => t.accessMode,
+    };
   }
-
-  @override
-  String toString() => name;
 }

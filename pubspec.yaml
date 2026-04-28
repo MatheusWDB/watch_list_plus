@@ -2,7 +2,7 @@ name: watchlist_plus
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -16,7 +16,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 1.0.0+1
+version: 2.0.0+1
 
 environment:
   sdk: ^3.10.3
@@ -36,24 +36,18 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
-  path_provider: ^2.1.5  
+  path_provider: ^2.1.5
   intl: ^0.20.2
+  file_picker: ^10.3.10
   flutter_slidable: ^3.1.2
-  flutter_launcher_icons: ^0.14.2  
+  flutter_launcher_icons: ^0.14.2
   flutter_riverpod: ^3.2.1
-  riverpod_annotation: ^4.0.2
   file_saver: ^0.3.1
   path: ^1.9.1
+  riverpod_annotation: ^4.0.2
+  share_plus: ^12.0.1
   shared_preferences: ^2.5.5
   sqflite: ^2.4.2+1
-
-flutter_launcher_icons:
-  android: true
-  ios: true
-  image_path: "assets/icon/tv.png"
-  min_sdk_android: 21 # android min sdk min:16, default 21
-  adaptive_icon_background: "#FFFFFF"  # Use um código de cor hexadecimal para a cor de fundo
-  adaptive_icon_foreground: "assets/icon/tv.png" #"assets/icon/adaptive_foreground.png"
 
 dev_dependencies:
   flutter_test:

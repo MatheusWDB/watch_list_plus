@@ -196,4 +196,86 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get save => 'Salvar';
+
+  @override
+  String get appSettings => 'Configurações';
+
+  @override
+  String get themeSystem => 'Sistema';
+
+  @override
+  String get themeLight => 'Claro';
+
+  @override
+  String get themeDark => 'Escuro';
+
+  @override
+  String get appTheme => 'Tema';
+
+  @override
+  String get backupSecurity => 'Segurança dos Dados';
+
+  @override
+  String get backupSecurityInfo =>
+      'O app salva tudo localmente. Use as opções abaixo para não perder dados ao trocar de dispositivo.';
+
+  @override
+  String get backupExport => 'Exportar seus dados';
+
+  @override
+  String get downloadBackup => 'Baixar backup';
+
+  @override
+  String get shareBackup => 'Compartilhar backup';
+
+  @override
+  String get importBackup => 'Carregar backup';
+
+  @override
+  String get replaceData => 'Substitui todos os dados atuais';
+
+  @override
+  String get confirmImport => 'Confirmar Importação';
+
+  @override
+  String get confirmImportMsg =>
+      'Isso apagará todos os dados atuais e os substituirá pelo backup. Continuar?';
+
+  @override
+  String get backupSaved => 'Backup salvo!';
+
+  @override
+  String get backupShared => 'Backup compartilhado!';
+
+  @override
+  String get backupError => 'Erro ao gerar backup';
+
+  @override
+  String get importSuccess => 'Backup importado com sucesso!';
+
+  @override
+  String get importError => 'Erro ao importar backup';
+
+  @override
+  String get updatedAt => 'Atualização';
+
+  @override
+  String get behavior => 'Comportamento';
+
+  @override
+  String get confirmDeleteTitle => 'Confirmar antes de deletar';
+
+  @override
+  String get confirmDeleteSubtitle =>
+      'Exibir diálogo de confirmação antes de remover um título';
+
+  @override
+  String get search => 'Procurar';
+
+  @override
+  String get showCompletedOnHome => 'Mostrar concluídos no início';
+
+  @override
+  String get showCompletedOnHomeSubtitle =>
+      'Exibir títulos assistidos na aba principal';
 }

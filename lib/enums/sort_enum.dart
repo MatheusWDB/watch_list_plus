@@ -1,31 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:watchlist_plus/l10n/app_localization.dart';
 
-enum SortEnum {
-  creationDate,
-  watched,
-  alphabeticalOrder,
+enum SortField {
+  title,
+  createdAt,
+  updatedAt,
   category,
-  streaming,
-  access;
+  streaming;
 
-  String displayNameTranslate(BuildContext context) {
-    switch (this) {
-      case SortEnum.creationDate:
-        return AppLocalizations.of(context)!.creationDate;
-      case SortEnum.watched:
-        return AppLocalizations.of(context)!.watched;
-      case SortEnum.alphabeticalOrder:
-        return AppLocalizations.of(context)!.alphabeticalOrder;
-      case SortEnum.category:
-        return AppLocalizations.of(context)!.category;
-      case SortEnum.streaming:
-        return AppLocalizations.of(context)!.streaming;
-      case SortEnum.access:
-        return AppLocalizations.of(context)!.accessMode;
-    }
+  String displayName(BuildContext context) {
+    final t = AppLocalizations.of(context)!;
+    return switch (this) {
+      SortField.title => t.alphabeticalOrder,
+      SortField.createdAt => t.creationDate,
+      SortField.updatedAt => t.updatedAt,
+      SortField.category => t.category,
+      SortField.streaming => t.streaming,
+    };
   }
-
-  @override
-  String toString() => name;
 }

@@ -63,7 +63,7 @@ import 'app_localization_pt.dart';
 /// property.
 abstract class AppLocalizations {
   AppLocalizations(String locale)
-      : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+    : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
@@ -86,16 +86,16 @@ abstract class AppLocalizations {
   /// of delegates is preferred or required.
   static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
       <LocalizationsDelegate<dynamic>>[
-    delegate,
-    GlobalMaterialLocalizations.delegate,
-    GlobalCupertinoLocalizations.delegate,
-    GlobalWidgetsLocalizations.delegate,
-  ];
+        delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ];
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
     Locale('en'),
-    Locale('pt')
+    Locale('pt'),
   ];
 
   /// No description provided for @homePageTitle.
@@ -463,6 +463,162 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Save'**
   String get save;
+
+  /// No description provided for @appSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'Settings'**
+  String get appSettings;
+
+  /// No description provided for @themeSystem.
+  ///
+  /// In en, this message translates to:
+  /// **'System'**
+  String get themeSystem;
+
+  /// No description provided for @themeLight.
+  ///
+  /// In en, this message translates to:
+  /// **'Light'**
+  String get themeLight;
+
+  /// No description provided for @themeDark.
+  ///
+  /// In en, this message translates to:
+  /// **'Dark'**
+  String get themeDark;
+
+  /// No description provided for @appTheme.
+  ///
+  /// In en, this message translates to:
+  /// **'Theme'**
+  String get appTheme;
+
+  /// No description provided for @backupSecurity.
+  ///
+  /// In en, this message translates to:
+  /// **'Data Security'**
+  String get backupSecurity;
+
+  /// No description provided for @backupSecurityInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'The app saves everything locally. Use the options below to avoid losing data when switching devices.'**
+  String get backupSecurityInfo;
+
+  /// No description provided for @backupExport.
+  ///
+  /// In en, this message translates to:
+  /// **'Export your data'**
+  String get backupExport;
+
+  /// No description provided for @downloadBackup.
+  ///
+  /// In en, this message translates to:
+  /// **'Download backup'**
+  String get downloadBackup;
+
+  /// No description provided for @shareBackup.
+  ///
+  /// In en, this message translates to:
+  /// **'Share backup'**
+  String get shareBackup;
+
+  /// No description provided for @importBackup.
+  ///
+  /// In en, this message translates to:
+  /// **'Load backup'**
+  String get importBackup;
+
+  /// No description provided for @replaceData.
+  ///
+  /// In en, this message translates to:
+  /// **'Replaces all current data'**
+  String get replaceData;
+
+  /// No description provided for @confirmImport.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm Import'**
+  String get confirmImport;
+
+  /// No description provided for @confirmImportMsg.
+  ///
+  /// In en, this message translates to:
+  /// **'This will erase all current data and replace it with the backup. Continue?'**
+  String get confirmImportMsg;
+
+  /// No description provided for @backupSaved.
+  ///
+  /// In en, this message translates to:
+  /// **'Backup saved!'**
+  String get backupSaved;
+
+  /// No description provided for @backupShared.
+  ///
+  /// In en, this message translates to:
+  /// **'Backup shared!'**
+  String get backupShared;
+
+  /// No description provided for @backupError.
+  ///
+  /// In en, this message translates to:
+  /// **'Error generating backup'**
+  String get backupError;
+
+  /// No description provided for @importSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Backup imported successfully!'**
+  String get importSuccess;
+
+  /// No description provided for @importError.
+  ///
+  /// In en, this message translates to:
+  /// **'Error importing backup'**
+  String get importError;
+
+  /// No description provided for @updatedAt.
+  ///
+  /// In en, this message translates to:
+  /// **'Last updated'**
+  String get updatedAt;
+
+  /// No description provided for @behavior.
+  ///
+  /// In en, this message translates to:
+  /// **'Behavior'**
+  String get behavior;
+
+  /// No description provided for @confirmDeleteTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm before deleting'**
+  String get confirmDeleteTitle;
+
+  /// No description provided for @confirmDeleteSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Show a confirmation dialog before removing a title'**
+  String get confirmDeleteSubtitle;
+
+  /// No description provided for @search.
+  ///
+  /// In en, this message translates to:
+  /// **'Search'**
+  String get search;
+
+  /// No description provided for @showCompletedOnHome.
+  ///
+  /// In en, this message translates to:
+  /// **'Show completed on home'**
+  String get showCompletedOnHome;
+
+  /// No description provided for @showCompletedOnHomeSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Display watched titles on the main tab'**
+  String get showCompletedOnHomeSubtitle;
 }
 
 class _AppLocalizationsDelegate
@@ -492,8 +648,9 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
   }
 
   throw FlutterError(
-      'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
-      'an issue with the localizations generation tool. Please file an issue '
-      'on GitHub with a reproducible sample app and the gen-l10n configuration '
-      'that was used.');
+    'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
+    'an issue with the localizations generation tool. Please file an issue '
+    'on GitHub with a reproducible sample app and the gen-l10n configuration '
+    'that was used.',
+  );
 }
