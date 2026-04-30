@@ -110,59 +110,23 @@ abstract class AppLocalizations {
   /// **'{completed}/{total} titles watched!'**
   String completedTitles(Object completed, Object total);
 
-  /// No description provided for @clearAll.
-  ///
-  /// In en, this message translates to:
-  /// **'Clear All'**
-  String get clearAll;
-
-  /// No description provided for @newTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'New Title...'**
-  String get newTitle;
-
-  /// No description provided for @titleRemoved.
-  ///
-  /// In en, this message translates to:
-  /// **'The title \"{title}\" has been removed successfully!'**
-  String titleRemoved(Object title);
-
-  /// No description provided for @actionUndone.
-  ///
-  /// In en, this message translates to:
-  /// **'Action undone!'**
-  String get actionUndone;
-
-  /// No description provided for @clearAllConfirmation.
-  ///
-  /// In en, this message translates to:
-  /// **'Clear All?'**
-  String get clearAllConfirmation;
-
   /// No description provided for @noTitles.
   ///
   /// In en, this message translates to:
   /// **'You do not have registered titles!'**
   String get noTitles;
 
-  /// No description provided for @close.
+  /// No description provided for @search.
   ///
   /// In en, this message translates to:
-  /// **'To close'**
-  String get close;
+  /// **'Search'**
+  String get search;
 
-  /// No description provided for @delete.
+  /// No description provided for @clearAll.
   ///
   /// In en, this message translates to:
-  /// **'Delete'**
-  String get delete;
-
-  /// No description provided for @edit.
-  ///
-  /// In en, this message translates to:
-  /// **'Edit'**
-  String get edit;
+  /// **'Clear All'**
+  String get clearAll;
 
   /// No description provided for @clearAllConfirmationDialog.
   ///
@@ -170,77 +134,41 @@ abstract class AppLocalizations {
   /// **'Clear All?'**
   String get clearAllConfirmationDialog;
 
+  /// No description provided for @confirmDelete.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to delete \"{title}\"?'**
+  String confirmDelete(Object title);
+
   /// No description provided for @confirmDeleteAll.
   ///
   /// In en, this message translates to:
   /// **'Are you sure you want to delete all titles?'**
   String get confirmDeleteAll;
 
-  /// No description provided for @cancel.
+  /// No description provided for @delete.
   ///
   /// In en, this message translates to:
-  /// **'Cancel'**
-  String get cancel;
+  /// **'Delete'**
+  String get delete;
 
-  /// No description provided for @addNewTitle.
+  /// No description provided for @confirmDeleteTitle.
   ///
   /// In en, this message translates to:
-  /// **'New Title...'**
-  String get addNewTitle;
+  /// **'Confirm before deleting'**
+  String get confirmDeleteTitle;
 
-  /// No description provided for @title.
+  /// No description provided for @confirmDeleteSubtitle.
   ///
   /// In en, this message translates to:
-  /// **'Title'**
-  String get title;
+  /// **'Show a confirmation dialog before removing a title'**
+  String get confirmDeleteSubtitle;
 
-  /// No description provided for @availableOn.
+  /// No description provided for @titleRemoved.
   ///
   /// In en, this message translates to:
-  /// **'Available on...'**
-  String get availableOn;
-
-  /// No description provided for @requiredField.
-  ///
-  /// In en, this message translates to:
-  /// **'Required field!'**
-  String get requiredField;
-
-  /// No description provided for @required.
-  ///
-  /// In en, this message translates to:
-  /// **'Required!'**
-  String get required;
-
-  /// No description provided for @add.
-  ///
-  /// In en, this message translates to:
-  /// **'Add'**
-  String get add;
-
-  /// No description provided for @selectStreamingAndAccess.
-  ///
-  /// In en, this message translates to:
-  /// **'Select streaming and access type'**
-  String get selectStreamingAndAccess;
-
-  /// No description provided for @back.
-  ///
-  /// In en, this message translates to:
-  /// **'Back'**
-  String get back;
-
-  /// No description provided for @chooseAtLeastOne.
-  ///
-  /// In en, this message translates to:
-  /// **'Choose at least one!'**
-  String get chooseAtLeastOne;
-
-  /// No description provided for @confirm.
-  ///
-  /// In en, this message translates to:
-  /// **'Confirm'**
-  String get confirm;
+  /// **'The title \"{title}\" has been removed successfully!'**
+  String titleRemoved(Object title);
 
   /// No description provided for @undo.
   ///
@@ -248,11 +176,161 @@ abstract class AppLocalizations {
   /// **'Undo'**
   String get undo;
 
+  /// No description provided for @edit.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit'**
+  String get edit;
+
+  /// No description provided for @editTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit Title...'**
+  String get editTitle;
+
+  /// No description provided for @addNewTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'New Title...'**
+  String get addNewTitle;
+
+  /// No description provided for @save.
+  ///
+  /// In en, this message translates to:
+  /// **'Save'**
+  String get save;
+
+  /// No description provided for @cancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel;
+
+  /// No description provided for @back.
+  ///
+  /// In en, this message translates to:
+  /// **'Back'**
+  String get back;
+
+  /// No description provided for @confirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm'**
+  String get confirm;
+
+  /// No description provided for @required.
+  ///
+  /// In en, this message translates to:
+  /// **'Required!'**
+  String get required;
+
+  /// No description provided for @requiredField.
+  ///
+  /// In en, this message translates to:
+  /// **'Required field!'**
+  String get requiredField;
+
+  /// No description provided for @chooseAtLeastOne.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose at least one!'**
+  String get chooseAtLeastOne;
+
+  /// No description provided for @title.
+  ///
+  /// In en, this message translates to:
+  /// **'Title'**
+  String get title;
+
+  /// No description provided for @category.
+  ///
+  /// In en, this message translates to:
+  /// **'Category'**
+  String get category;
+
+  /// No description provided for @selectCategory.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Category'**
+  String get selectCategory;
+
+  /// No description provided for @availableOn.
+  ///
+  /// In en, this message translates to:
+  /// **'Available on...'**
+  String get availableOn;
+
+  /// No description provided for @selectStreamingAndAccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Select streaming and access type'**
+  String get selectStreamingAndAccess;
+
+  /// No description provided for @streaming.
+  ///
+  /// In en, this message translates to:
+  /// **'Streaming'**
+  String get streaming;
+
+  /// No description provided for @selectStreaming.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Streaming'**
+  String get selectStreaming;
+
+  /// No description provided for @accessMode.
+  ///
+  /// In en, this message translates to:
+  /// **'Access Mode'**
+  String get accessMode;
+
   /// No description provided for @selectAccess.
   ///
   /// In en, this message translates to:
   /// **'Select Access'**
   String get selectAccess;
+
+  /// No description provided for @all.
+  ///
+  /// In en, this message translates to:
+  /// **'All'**
+  String get all;
+
+  /// No description provided for @watched.
+  ///
+  /// In en, this message translates to:
+  /// **'Watched'**
+  String get watched;
+
+  /// No description provided for @unwatched.
+  ///
+  /// In en, this message translates to:
+  /// **'Unwatched'**
+  String get unwatched;
+
+  /// No description provided for @filterBy.
+  ///
+  /// In en, this message translates to:
+  /// **'Filter by:'**
+  String get filterBy;
+
+  /// No description provided for @alphabeticalOrder.
+  ///
+  /// In en, this message translates to:
+  /// **'Alphabetical Order'**
+  String get alphabeticalOrder;
+
+  /// No description provided for @creationDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Creation Date'**
+  String get creationDate;
+
+  /// No description provided for @updatedAt.
+  ///
+  /// In en, this message translates to:
+  /// **'Last updated'**
+  String get updatedAt;
 
   /// No description provided for @buyRent.
   ///
@@ -269,14 +347,14 @@ abstract class AppLocalizations {
   /// No description provided for @signature.
   ///
   /// In en, this message translates to:
-  /// **'Signature'**
+  /// **'Subscription'**
   String get signature;
 
-  /// No description provided for @selectCategory.
+  /// No description provided for @other.
   ///
   /// In en, this message translates to:
-  /// **'Select Category'**
-  String get selectCategory;
+  /// **'Other'**
+  String get other;
 
   /// No description provided for @anime.
   ///
@@ -344,12 +422,6 @@ abstract class AppLocalizations {
   /// **'Serial'**
   String get serial;
 
-  /// No description provided for @tvSeries.
-  ///
-  /// In en, this message translates to:
-  /// **'TV Series'**
-  String get tvSeries;
-
   /// No description provided for @shortFilm.
   ///
   /// In en, this message translates to:
@@ -367,6 +439,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Special'**
   String get special;
+
+  /// No description provided for @tvSeries.
+  ///
+  /// In en, this message translates to:
+  /// **'TV Series'**
+  String get tvSeries;
 
   /// No description provided for @tvProgram.
   ///
@@ -386,89 +464,17 @@ abstract class AppLocalizations {
   /// **'Web Series'**
   String get webSeries;
 
-  /// No description provided for @all.
-  ///
-  /// In en, this message translates to:
-  /// **'All'**
-  String get all;
-
-  /// No description provided for @watched.
-  ///
-  /// In en, this message translates to:
-  /// **'Watched'**
-  String get watched;
-
-  /// No description provided for @unwatched.
-  ///
-  /// In en, this message translates to:
-  /// **'Unwatched'**
-  String get unwatched;
-
-  /// No description provided for @category.
-  ///
-  /// In en, this message translates to:
-  /// **'Category'**
-  String get category;
-
-  /// No description provided for @streaming.
-  ///
-  /// In en, this message translates to:
-  /// **'Streaming'**
-  String get streaming;
-
-  /// No description provided for @accessMode.
-  ///
-  /// In en, this message translates to:
-  /// **'Access Mode'**
-  String get accessMode;
-
-  /// No description provided for @creationDate.
-  ///
-  /// In en, this message translates to:
-  /// **'Creation Date'**
-  String get creationDate;
-
-  /// No description provided for @alphabeticalOrder.
-  ///
-  /// In en, this message translates to:
-  /// **'Alphabetical Order'**
-  String get alphabeticalOrder;
-
-  /// No description provided for @selectStreaming.
-  ///
-  /// In en, this message translates to:
-  /// **'Select Streaming'**
-  String get selectStreaming;
-
-  /// No description provided for @other.
-  ///
-  /// In en, this message translates to:
-  /// **'Other'**
-  String get other;
-
-  /// No description provided for @filterBy.
-  ///
-  /// In en, this message translates to:
-  /// **'Filter by:'**
-  String get filterBy;
-
-  /// No description provided for @editTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Edit Title...'**
-  String get editTitle;
-
-  /// No description provided for @save.
-  ///
-  /// In en, this message translates to:
-  /// **'Save'**
-  String get save;
-
   /// No description provided for @appSettings.
   ///
   /// In en, this message translates to:
   /// **'Settings'**
   String get appSettings;
+
+  /// No description provided for @appTheme.
+  ///
+  /// In en, this message translates to:
+  /// **'Theme'**
+  String get appTheme;
 
   /// No description provided for @themeSystem.
   ///
@@ -488,11 +494,23 @@ abstract class AppLocalizations {
   /// **'Dark'**
   String get themeDark;
 
-  /// No description provided for @appTheme.
+  /// No description provided for @behavior.
   ///
   /// In en, this message translates to:
-  /// **'Theme'**
-  String get appTheme;
+  /// **'Behavior'**
+  String get behavior;
+
+  /// No description provided for @showCompletedOnHome.
+  ///
+  /// In en, this message translates to:
+  /// **'Show completed on home'**
+  String get showCompletedOnHome;
+
+  /// No description provided for @showCompletedOnHomeSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Display watched titles on the main tab'**
+  String get showCompletedOnHomeSubtitle;
 
   /// No description provided for @backupSecurity.
   ///
@@ -577,48 +595,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Error importing backup'**
   String get importError;
-
-  /// No description provided for @updatedAt.
-  ///
-  /// In en, this message translates to:
-  /// **'Last updated'**
-  String get updatedAt;
-
-  /// No description provided for @behavior.
-  ///
-  /// In en, this message translates to:
-  /// **'Behavior'**
-  String get behavior;
-
-  /// No description provided for @confirmDeleteTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Confirm before deleting'**
-  String get confirmDeleteTitle;
-
-  /// No description provided for @confirmDeleteSubtitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Show a confirmation dialog before removing a title'**
-  String get confirmDeleteSubtitle;
-
-  /// No description provided for @search.
-  ///
-  /// In en, this message translates to:
-  /// **'Search'**
-  String get search;
-
-  /// No description provided for @showCompletedOnHome.
-  ///
-  /// In en, this message translates to:
-  /// **'Show completed on home'**
-  String get showCompletedOnHome;
-
-  /// No description provided for @showCompletedOnHomeSubtitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Display watched titles on the main tab'**
-  String get showCompletedOnHomeSubtitle;
 }
 
 class _AppLocalizationsDelegate

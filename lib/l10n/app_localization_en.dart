@@ -17,10 +17,34 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
+  String get noTitles => 'You do not have registered titles!';
+
+  @override
+  String get search => 'Search';
+
+  @override
   String get clearAll => 'Clear All';
 
   @override
-  String get newTitle => 'New Title...';
+  String get clearAllConfirmationDialog => 'Clear All?';
+
+  @override
+  String confirmDelete(Object title) {
+    return 'Are you sure you want to delete \"$title\"?';
+  }
+
+  @override
+  String get confirmDeleteAll => 'Are you sure you want to delete all titles?';
+
+  @override
+  String get delete => 'Delete';
+
+  @override
+  String get confirmDeleteTitle => 'Confirm before deleting';
+
+  @override
+  String get confirmDeleteSubtitle =>
+      'Show a confirmation dialog before removing a title';
 
   @override
   String titleRemoved(Object title) {
@@ -28,67 +52,85 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get actionUndone => 'Action undone!';
-
-  @override
-  String get clearAllConfirmation => 'Clear All?';
-
-  @override
-  String get noTitles => 'You do not have registered titles!';
-
-  @override
-  String get close => 'To close';
-
-  @override
-  String get delete => 'Delete';
+  String get undo => 'Undo';
 
   @override
   String get edit => 'Edit';
 
   @override
-  String get clearAllConfirmationDialog => 'Clear All?';
-
-  @override
-  String get confirmDeleteAll => 'Are you sure you want to delete all titles?';
-
-  @override
-  String get cancel => 'Cancel';
+  String get editTitle => 'Edit Title...';
 
   @override
   String get addNewTitle => 'New Title...';
 
   @override
-  String get title => 'Title';
+  String get save => 'Save';
 
   @override
-  String get availableOn => 'Available on...';
-
-  @override
-  String get requiredField => 'Required field!';
-
-  @override
-  String get required => 'Required!';
-
-  @override
-  String get add => 'Add';
-
-  @override
-  String get selectStreamingAndAccess => 'Select streaming and access type';
+  String get cancel => 'Cancel';
 
   @override
   String get back => 'Back';
 
   @override
-  String get chooseAtLeastOne => 'Choose at least one!';
-
-  @override
   String get confirm => 'Confirm';
 
   @override
-  String get undo => 'Undo';
+  String get required => 'Required!';
+
+  @override
+  String get requiredField => 'Required field!';
+
+  @override
+  String get chooseAtLeastOne => 'Choose at least one!';
+
+  @override
+  String get title => 'Title';
+
+  @override
+  String get category => 'Category';
+
+  @override
+  String get selectCategory => 'Select Category';
+
+  @override
+  String get availableOn => 'Available on...';
+
+  @override
+  String get selectStreamingAndAccess => 'Select streaming and access type';
+
+  @override
+  String get streaming => 'Streaming';
+
+  @override
+  String get selectStreaming => 'Select Streaming';
+
+  @override
+  String get accessMode => 'Access Mode';
 
   @override
   String get selectAccess => 'Select Access';
+
+  @override
+  String get all => 'All';
+
+  @override
+  String get watched => 'Watched';
+
+  @override
+  String get unwatched => 'Unwatched';
+
+  @override
+  String get filterBy => 'Filter by:';
+
+  @override
+  String get alphabeticalOrder => 'Alphabetical Order';
+
+  @override
+  String get creationDate => 'Creation Date';
+
+  @override
+  String get updatedAt => 'Last updated';
 
   @override
   String get buyRent => 'Buy/Rent';
@@ -97,10 +139,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get free => 'Free';
 
   @override
-  String get signature => 'Signature';
+  String get signature => 'Subscription';
 
   @override
-  String get selectCategory => 'Select Category';
+  String get other => 'Other';
 
   @override
   String get anime => 'Anime';
@@ -136,9 +178,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get serial => 'Serial';
 
   @override
-  String get tvSeries => 'TV Series';
-
-  @override
   String get shortFilm => 'Short Film';
 
   @override
@@ -146,6 +185,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get special => 'Special';
+
+  @override
+  String get tvSeries => 'TV Series';
 
   @override
   String get tvProgram => 'TV Program';
@@ -157,46 +199,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get webSeries => 'Web Series';
 
   @override
-  String get all => 'All';
-
-  @override
-  String get watched => 'Watched';
-
-  @override
-  String get unwatched => 'Unwatched';
-
-  @override
-  String get category => 'Category';
-
-  @override
-  String get streaming => 'Streaming';
-
-  @override
-  String get accessMode => 'Access Mode';
-
-  @override
-  String get creationDate => 'Creation Date';
-
-  @override
-  String get alphabeticalOrder => 'Alphabetical Order';
-
-  @override
-  String get selectStreaming => 'Select Streaming';
-
-  @override
-  String get other => 'Other';
-
-  @override
-  String get filterBy => 'Filter by:';
-
-  @override
-  String get editTitle => 'Edit Title...';
-
-  @override
-  String get save => 'Save';
-
-  @override
   String get appSettings => 'Settings';
+
+  @override
+  String get appTheme => 'Theme';
 
   @override
   String get themeSystem => 'System';
@@ -208,7 +214,14 @@ class AppLocalizationsEn extends AppLocalizations {
   String get themeDark => 'Dark';
 
   @override
-  String get appTheme => 'Theme';
+  String get behavior => 'Behavior';
+
+  @override
+  String get showCompletedOnHome => 'Show completed on home';
+
+  @override
+  String get showCompletedOnHomeSubtitle =>
+      'Display watched titles on the main tab';
 
   @override
   String get backupSecurity => 'Data Security';
@@ -253,27 +266,4 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get importError => 'Error importing backup';
-
-  @override
-  String get updatedAt => 'Last updated';
-
-  @override
-  String get behavior => 'Behavior';
-
-  @override
-  String get confirmDeleteTitle => 'Confirm before deleting';
-
-  @override
-  String get confirmDeleteSubtitle =>
-      'Show a confirmation dialog before removing a title';
-
-  @override
-  String get search => 'Search';
-
-  @override
-  String get showCompletedOnHome => 'Show completed on home';
-
-  @override
-  String get showCompletedOnHomeSubtitle =>
-      'Display watched titles on the main tab';
 }

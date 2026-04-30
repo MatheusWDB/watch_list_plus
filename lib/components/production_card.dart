@@ -14,9 +14,9 @@ class ProductionCard extends ConsumerWidget {
 
   const ProductionCard({required this.production, super.key});
 
-  void _onDelete(BuildContext context, WidgetRef ref) {
+  Future<void> _onDelete(BuildContext context, WidgetRef ref) async {
     HapticFeedback.mediumImpact();
-    _delete(context, ref);
+    await _delete(context, ref);
   }
 
   void _onEdit(BuildContext context) {
@@ -50,7 +50,7 @@ class ProductionCard extends ConsumerWidget {
         context: context,
         builder: (ctx) => AlertDialog(
           title: Text(t.delete),
-          content: Text(t.confirmDeleteAll),
+          content: Text(t.confirmDelete(production.title)),
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(ctx, false),
@@ -125,7 +125,7 @@ class ProductionCard extends ConsumerWidget {
         motion: const BehindMotion(),
         children: [
           SlidableAction(
-            onPressed: (context) => _onDelete(context, ref),
+            onPressed: (_) => _onDelete(context, ref),
             backgroundColor: colors.error,
             foregroundColor: colors.onError,
             icon: Icons.delete_outline_rounded,

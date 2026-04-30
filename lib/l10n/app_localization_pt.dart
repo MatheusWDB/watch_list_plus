@@ -17,10 +17,35 @@ class AppLocalizationsPt extends AppLocalizations {
   }
 
   @override
+  String get noTitles => 'Você não possui títulos cadastrados!';
+
+  @override
+  String get search => 'Procurar';
+
+  @override
   String get clearAll => 'Limpar Tudo';
 
   @override
-  String get newTitle => 'Novo Título...';
+  String get clearAllConfirmationDialog => 'Limpar Tudo?';
+
+  @override
+  String confirmDelete(Object title) {
+    return 'Tem certeza que deseja deletar \"$title\"?';
+  }
+
+  @override
+  String get confirmDeleteAll =>
+      'Tem certeza que deseja apagar todos os títulos?';
+
+  @override
+  String get delete => 'Deletar';
+
+  @override
+  String get confirmDeleteTitle => 'Confirmar antes de deletar';
+
+  @override
+  String get confirmDeleteSubtitle =>
+      'Exibir diálogo de confirmação antes de remover um título';
 
   @override
   String titleRemoved(Object title) {
@@ -28,69 +53,86 @@ class AppLocalizationsPt extends AppLocalizations {
   }
 
   @override
-  String get actionUndone => 'Ação desfeita!';
-
-  @override
-  String get clearAllConfirmation => 'Limpar Tudo?';
-
-  @override
-  String get noTitles => 'Você não possui títulos cadastrados!';
-
-  @override
-  String get close => 'Fechar';
-
-  @override
-  String get delete => 'Deletar';
+  String get undo => 'Desfazer';
 
   @override
   String get edit => 'Editar';
 
   @override
-  String get clearAllConfirmationDialog => 'Limpar Tudo?';
-
-  @override
-  String get confirmDeleteAll =>
-      'Tem certeza que deseja apagar todos os títulos?';
-
-  @override
-  String get cancel => 'Cancelar';
+  String get editTitle => 'Editar Título...';
 
   @override
   String get addNewTitle => 'Novo Título...';
 
   @override
-  String get title => 'Título';
+  String get save => 'Salvar';
 
   @override
-  String get availableOn => 'Disponível em...';
+  String get cancel => 'Cancelar';
 
   @override
-  String get requiredField => 'Campo obrigatório!';
+  String get back => 'Voltar';
+
+  @override
+  String get confirm => 'Confirmar';
 
   @override
   String get required => 'Obrigatório!';
 
   @override
-  String get add => 'Adicionar';
+  String get requiredField => 'Campo obrigatório!';
+
+  @override
+  String get chooseAtLeastOne => 'Escolha ao menos um!';
+
+  @override
+  String get title => 'Título';
+
+  @override
+  String get category => 'Categoria';
+
+  @override
+  String get selectCategory => 'Selecione a categoria';
+
+  @override
+  String get availableOn => 'Disponível em...';
 
   @override
   String get selectStreamingAndAccess =>
       'Selecione o streaming e o tipo de acesso';
 
   @override
-  String get back => 'Voltar';
+  String get streaming => 'Streaming';
 
   @override
-  String get chooseAtLeastOne => 'Escolha ao menos um!';
+  String get selectStreaming => 'Selecione o streaming';
 
   @override
-  String get confirm => 'Confirmar';
-
-  @override
-  String get undo => 'Desfazer';
+  String get accessMode => 'Modo de Acesso';
 
   @override
   String get selectAccess => 'Selecione o acesso';
+
+  @override
+  String get all => 'Tudo';
+
+  @override
+  String get watched => 'Assistidos';
+
+  @override
+  String get unwatched => 'Não Assistidos';
+
+  @override
+  String get filterBy => 'Filtrar por:';
+
+  @override
+  String get alphabeticalOrder => 'Ordem alfabética';
+
+  @override
+  String get creationDate => 'Data de criação';
+
+  @override
+  String get updatedAt => 'Atualização';
 
   @override
   String get buyRent => 'Compra/Aluguel';
@@ -102,7 +144,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get signature => 'Assinatura';
 
   @override
-  String get selectCategory => 'Selecione a categoria';
+  String get other => 'Outro';
 
   @override
   String get anime => 'Anime';
@@ -138,9 +180,6 @@ class AppLocalizationsPt extends AppLocalizations {
   String get serial => 'Seriado';
 
   @override
-  String get tvSeries => 'Série de TV';
-
-  @override
   String get shortFilm => 'Curta-metragem';
 
   @override
@@ -148,6 +187,9 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get special => 'Especial';
+
+  @override
+  String get tvSeries => 'Série de TV';
 
   @override
   String get tvProgram => 'Programa de TV';
@@ -159,46 +201,10 @@ class AppLocalizationsPt extends AppLocalizations {
   String get webSeries => 'Websérie';
 
   @override
-  String get all => 'Tudo';
-
-  @override
-  String get watched => 'Assistidos';
-
-  @override
-  String get unwatched => 'Não Assistidos';
-
-  @override
-  String get category => 'Categoria';
-
-  @override
-  String get streaming => 'Streaming';
-
-  @override
-  String get accessMode => 'Modo de Acesso';
-
-  @override
-  String get creationDate => 'Data de criação';
-
-  @override
-  String get alphabeticalOrder => 'Ordem alfabética';
-
-  @override
-  String get selectStreaming => 'Selecione o streaming';
-
-  @override
-  String get other => 'Outro';
-
-  @override
-  String get filterBy => 'Filtrar por:';
-
-  @override
-  String get editTitle => 'Editar Título...';
-
-  @override
-  String get save => 'Salvar';
-
-  @override
   String get appSettings => 'Configurações';
+
+  @override
+  String get appTheme => 'Tema';
 
   @override
   String get themeSystem => 'Sistema';
@@ -210,7 +216,14 @@ class AppLocalizationsPt extends AppLocalizations {
   String get themeDark => 'Escuro';
 
   @override
-  String get appTheme => 'Tema';
+  String get behavior => 'Comportamento';
+
+  @override
+  String get showCompletedOnHome => 'Mostrar concluídos no início';
+
+  @override
+  String get showCompletedOnHomeSubtitle =>
+      'Exibir títulos assistidos na aba principal';
 
   @override
   String get backupSecurity => 'Segurança dos Dados';
@@ -255,27 +268,4 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get importError => 'Erro ao importar backup';
-
-  @override
-  String get updatedAt => 'Atualização';
-
-  @override
-  String get behavior => 'Comportamento';
-
-  @override
-  String get confirmDeleteTitle => 'Confirmar antes de deletar';
-
-  @override
-  String get confirmDeleteSubtitle =>
-      'Exibir diálogo de confirmação antes de remover um título';
-
-  @override
-  String get search => 'Procurar';
-
-  @override
-  String get showCompletedOnHome => 'Mostrar concluídos no início';
-
-  @override
-  String get showCompletedOnHomeSubtitle =>
-      'Exibir títulos assistidos na aba principal';
 }
