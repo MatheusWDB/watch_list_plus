@@ -30,7 +30,6 @@ class FilterBar extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final t = AppLocalizations.of(context)!;
     final notifier = ref.read(activeFilterProvider.notifier);
-    //final colors = Theme.of(context).colorScheme;
 
     final bool isFiltered = filter.filter != FilterEnum.all;
 
@@ -82,7 +81,6 @@ class FilterBar extends ConsumerWidget {
             ),
           ),
 
-          // ── Access mode dropdown chip ──────────────────────────────────────
           DropdownChip<AccessEnum>(
             label: filter.filter == FilterEnum.access
                 ? _activeLabel(context)

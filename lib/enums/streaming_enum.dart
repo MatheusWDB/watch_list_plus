@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:watchlist_plus/l10n/app_localization.dart';
 
 enum StreamingEnum {
-  absent('Selecione o streaming'),
+  absent(''),
   apple('Apple TV+'),
   crunchy('Crunchyroll'),
   disney('Disney+'),
@@ -15,7 +15,7 @@ enum StreamingEnum {
   sbt('SBT+'),
   telecine('Telecine'),
   youtube('YouTube'),
-  other('Outro');
+  other('');
 
   String displayNameTranslate(BuildContext context) {
     switch (this) {

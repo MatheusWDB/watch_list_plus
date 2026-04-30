@@ -62,23 +62,22 @@ class DashboardTab extends ConsumerWidget {
 
         Padding(
           padding: const EdgeInsets.fromLTRB(16, 4, 16, 0),
-          child: Row(
-            children: [
-              Consumer(
-                builder: (_, ref, _) {
-                  final all = ref.watch(productionListProvider).value ?? [];
-                  return Text(
-                    t.completedTitles(
-                      all.where((p) => p.watched).length,
-                      all.length,
-                    ),
-                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                      color: colors.onSurface.withValues(alpha: 0.6),
-                    ),
-                  );
-                },
-              ),
-            ],
+          child: Align(
+            alignment: Alignment.centerLeft,
+            child: Consumer(
+              builder: (_, ref, _) {
+                final all = ref.watch(productionListProvider).value ?? [];
+                return Text(
+                  t.completedTitles(
+                    all.where((p) => p.watched).length,
+                    all.length,
+                  ),
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                    color: colors.onSurface.withValues(alpha: 0.6),
+                  ),
+                );
+              },
+            ),
           ),
         ),
 

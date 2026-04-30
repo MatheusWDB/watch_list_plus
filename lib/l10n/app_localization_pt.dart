@@ -98,10 +98,6 @@ class AppLocalizationsPt extends AppLocalizations {
   String get availableOn => 'Disponível em...';
 
   @override
-  String get selectStreamingAndAccess =>
-      'Selecione o streaming e o tipo de acesso';
-
-  @override
   String get streaming => 'Streaming';
 
   @override
@@ -118,12 +114,6 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get watched => 'Assistidos';
-
-  @override
-  String get unwatched => 'Não Assistidos';
-
-  @override
-  String get filterBy => 'Filtrar por:';
 
   @override
   String get alphabeticalOrder => 'Ordem alfabética';
@@ -217,13 +207,6 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get behavior => 'Comportamento';
-
-  @override
-  String get showCompletedOnHome => 'Mostrar concluídos no início';
-
-  @override
-  String get showCompletedOnHomeSubtitle =>
-      'Exibir títulos assistidos na aba principal';
 
   @override
   String get backupSecurity => 'Segurança dos Dados';

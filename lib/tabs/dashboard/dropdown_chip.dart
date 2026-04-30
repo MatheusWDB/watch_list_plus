@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class DropdownChip<T> extends StatelessWidget {
+class DropdownChip<T> extends StatefulWidget {
   final String label;
   final bool isActive;
   final List<T> values;
@@ -18,45 +18,55 @@ class DropdownChip<T> extends StatelessWidget {
     super.key,
   });
 
-  void _onSelected(GlobalKey<PopupMenuButtonState<T>> menuKey) {
-    {
-      if (isActive) {
-        onClear();
-      } else {
-        menuKey.currentState?.showButtonMenu();
-      }
+  @override
+  State<DropdownChip<T>> createState() => _DropdownChipState<T>();
+}
+
+class _DropdownChipState<T> extends State<DropdownChip<T>> {
+  final _menuKey = GlobalKey<PopupMenuButtonState<T>>();
+
+  void _handleTap() {
+    if (widget.isActive) {
+      widget.onClear();
+    } else {
+      _menuKey.currentState?.showButtonMenu();
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    final menuKey = GlobalKey<PopupMenuButtonState<T>>();
     final colors = Theme.of(context).colorScheme;
 
     return PopupMenuButton<T>(
-      key: menuKey,
+      key: _menuKey,
       tooltip: '',
       offset: const Offset(0, 36),
-      onSelected: onSelected,
-      itemBuilder: (_) => values
-          .map((v) => PopupMenuItem<T>(value: v, child: Text(labelOf(v))))
+      onSelected: widget.onSelected,
+      itemBuilder: (_) => widget.values
+          .map(
+            (v) => PopupMenuItem<T>(value: v, child: Text(widget.labelOf(v))),
+          )
           .toList(),
       child: FilterChip(
         label: Row(
           mainAxisSize: MainAxisSize.min,
           spacing: 4,
           children: [
-            Text(label),
+            Text(widget.label),
             Icon(
-              isActive ? Icons.close_rounded : Icons.arrow_drop_down_rounded,
+              widget.isActive
+                  ? Icons.close_rounded
+                  : Icons.arrow_drop_down_rounded,
               size: 16,
-              color: isActive ? colors.onSecondaryContainer : colors.onSurface,
+              color: widget.isActive
+                  ? colors.onSecondaryContainer
+                  : colors.onSurface,
             ),
           ],
         ),
-        selected: isActive,
+        selected: widget.isActive,
         showCheckmark: false,
-        onSelected: (_) => _onSelected(menuKey),
+        onSelected: (_) => _handleTap(),
       ),
     );
   }

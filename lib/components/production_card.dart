@@ -14,22 +14,26 @@ class ProductionCard extends ConsumerWidget {
 
   const ProductionCard({required this.production, super.key});
 
-  Future<void> _onDelete(BuildContext context, WidgetRef ref) async {
-    HapticFeedback.mediumImpact();
-    await _delete(context, ref);
-  }
+  static const Map<StreamingEnum, Color> _serviceColors = {
+    StreamingEnum.apple: Color(0xFF999999),
+    StreamingEnum.crunchy: Color(0xFFFF640A),
+    StreamingEnum.disney: Color(0xFF0CA8B8),
+    StreamingEnum.globo: Color(0xFFEE3E2F),
+    StreamingEnum.max: Color(0xFF536DFE),
+    StreamingEnum.netflix: Color(0xFFE90916),
+    StreamingEnum.paramount: Color(0xFF0163FF),
+    StreamingEnum.pluto: Color(0xFFFEF21B),
+    StreamingEnum.prime: Color(0xFF0578FF),
+    StreamingEnum.sbt: Color(0xFF00A859),
+    StreamingEnum.telecine: Color(0xFF7986CB),
+    StreamingEnum.youtube: Color(0xFFFF6D00),
+  };
 
-  void _onEdit(BuildContext context) {
-    HapticFeedback.selectionClick();
-    _edit(context);
-  }
-
-  void _onToggleWatched(WidgetRef ref) {
-    HapticFeedback.mediumImpact();
-    ref.read(productionListProvider.notifier).toggleWatched(production);
-  }
+  static Color _serviceColor(StreamingEnum service) =>
+      _serviceColors[service] ?? const Color(0xFF607D8B);
 
   Future<void> _delete(BuildContext context, WidgetRef ref) async {
+    HapticFeedback.mediumImpact();
     final t = AppLocalizations.of(context)!;
     final settings = ref.read(settingsProvider);
 
@@ -43,6 +47,21 @@ class ProductionCard extends ConsumerWidget {
 
     if (!context.mounted) return;
     _showUndoSnackbar(context, ref, t);
+  }
+
+  void _edit(BuildContext context) {
+    HapticFeedback.selectionClick();
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => AddOrUpdateScreen(production: production),
+      ),
+    );
+  }
+
+  void _onToggleWatched(WidgetRef ref) {
+    HapticFeedback.mediumImpact();
+    ref.read(productionListProvider.notifier).toggleWatched(production);
   }
 
   Future<bool?> _showDeleteDialog(BuildContext context, AppLocalizations t) =>
@@ -87,31 +106,6 @@ class ProductionCard extends ConsumerWidget {
     );
   }
 
-  void _edit(BuildContext context) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (_) => AddOrUpdateScreen(production: production),
-      ),
-    );
-  }
-
-  Color _serviceColor(StreamingEnum service) => switch (service) {
-    StreamingEnum.apple => const Color(0xFF999999),
-    StreamingEnum.crunchy => const Color(0xFFFF640A),
-    StreamingEnum.disney => const Color(0xFF0CA8B8),
-    StreamingEnum.globo => const Color(0xFFEE3E2F),
-    StreamingEnum.max => const Color(0xFF536DFE),
-    StreamingEnum.netflix => const Color(0xFFE90916),
-    StreamingEnum.paramount => const Color(0xFF0163FF),
-    StreamingEnum.pluto => const Color(0xFFFEF21B),
-    StreamingEnum.prime => const Color(0xFF0578FF),
-    StreamingEnum.sbt => const Color(0xFF00A859),
-    StreamingEnum.telecine => const Color(0xFF7986CB),
-    StreamingEnum.youtube => const Color(0xFFFF6D00),
-    _ => const Color(0xFF607D8B),
-  };
-
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final t = AppLocalizations.of(context)!;
@@ -125,7 +119,7 @@ class ProductionCard extends ConsumerWidget {
         motion: const BehindMotion(),
         children: [
           SlidableAction(
-            onPressed: (_) => _onDelete(context, ref),
+            onPressed: (_) => _delete(context, ref),
             backgroundColor: colors.error,
             foregroundColor: colors.onError,
             icon: Icons.delete_outline_rounded,
@@ -141,7 +135,7 @@ class ProductionCard extends ConsumerWidget {
         motion: const BehindMotion(),
         children: [
           SlidableAction(
-            onPressed: (context) => _onEdit(context),
+            onPressed: (context) => _edit(context),
             backgroundColor: colors.tertiary,
             foregroundColor: colors.onTertiary,
             icon: Icons.edit_outlined,
@@ -156,7 +150,7 @@ class ProductionCard extends ConsumerWidget {
         margin: EdgeInsets.zero,
         child: InkWell(
           borderRadius: BorderRadius.circular(12),
-          onTap: () => _onEdit(context),
+          onTap: () => _edit(context),
           onLongPress: () => _onToggleWatched(ref),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),

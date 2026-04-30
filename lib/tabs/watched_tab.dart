@@ -4,6 +4,7 @@ import 'package:watchlist_plus/components/production_card.dart';
 import 'package:watchlist_plus/l10n/app_localization.dart';
 import 'package:watchlist_plus/models/production.dart';
 import 'package:watchlist_plus/providers/production_list_provider.dart';
+import 'package:watchlist_plus/tabs/dashboard/empty_state.dart';
 
 class WatchedTab extends ConsumerWidget {
   const WatchedTab({super.key});
@@ -11,7 +12,6 @@ class WatchedTab extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final t = AppLocalizations.of(context)!;
-    final colorScheme = Theme.of(context).colorScheme;
 
     final List<Production> watched =
         (ref.watch(productionListProvider).value ?? [])
@@ -19,26 +19,7 @@ class WatchedTab extends ConsumerWidget {
             .toList();
 
     if (watched.isEmpty) {
-      return Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(
-              Icons.done_all_rounded,
-              size: 52,
-              color: colorScheme.onSurface.withValues(alpha: 0.3),
-            ),
-            const SizedBox(height: 12),
-            Text(
-              t.noTitles,
-              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                color: colorScheme.onSurface.withValues(alpha: 0.4),
-                fontStyle: FontStyle.italic,
-              ),
-            ),
-          ],
-        ),
-      );
+      return EmptyState(message: t.noTitles, icon: Icons.done_all_rounded);
     }
 
     return ListView.separated(

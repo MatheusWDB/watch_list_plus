@@ -2,8 +2,13 @@ import 'package:flutter/material.dart';
 
 class EmptyState extends StatelessWidget {
   final String message;
+  final IconData icon;
 
-  const EmptyState({required this.message, super.key});
+  const EmptyState({
+    required this.message,
+    this.icon = Icons.tv_off_outlined,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) => Center(
@@ -11,7 +16,7 @@ class EmptyState extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         Icon(
-          Icons.tv_off_outlined,
+          icon,
           size: 52,
           color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.3),
         ),

@@ -260,12 +260,6 @@ abstract class AppLocalizations {
   /// **'Available on...'**
   String get availableOn;
 
-  /// No description provided for @selectStreamingAndAccess.
-  ///
-  /// In en, this message translates to:
-  /// **'Select streaming and access type'**
-  String get selectStreamingAndAccess;
-
   /// No description provided for @streaming.
   ///
   /// In en, this message translates to:
@@ -301,18 +295,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Watched'**
   String get watched;
-
-  /// No description provided for @unwatched.
-  ///
-  /// In en, this message translates to:
-  /// **'Unwatched'**
-  String get unwatched;
-
-  /// No description provided for @filterBy.
-  ///
-  /// In en, this message translates to:
-  /// **'Filter by:'**
-  String get filterBy;
 
   /// No description provided for @alphabeticalOrder.
   ///
@@ -499,18 +481,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Behavior'**
   String get behavior;
-
-  /// No description provided for @showCompletedOnHome.
-  ///
-  /// In en, this message translates to:
-  /// **'Show completed on home'**
-  String get showCompletedOnHome;
-
-  /// No description provided for @showCompletedOnHomeSubtitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Display watched titles on the main tab'**
-  String get showCompletedOnHomeSubtitle;
 
   /// No description provided for @backupSecurity.
   ///

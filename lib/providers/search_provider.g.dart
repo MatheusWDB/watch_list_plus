@@ -117,7 +117,7 @@ final class ActiveFilterProvider
   }
 }
 
-String _$activeFilterHash() => r'f0b64b8fe422e86384444db75b2fe8a96476ab61';
+String _$activeFilterHash() => r'a2580bffc00e7cafc8bdf418601d604279eb7b79';
 
 abstract class _$ActiveFilter
     extends

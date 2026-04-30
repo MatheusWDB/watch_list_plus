@@ -97,9 +97,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get availableOn => 'Available on...';
 
   @override
-  String get selectStreamingAndAccess => 'Select streaming and access type';
-
-  @override
   String get streaming => 'Streaming';
 
   @override
@@ -116,12 +113,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get watched => 'Watched';
-
-  @override
-  String get unwatched => 'Unwatched';
-
-  @override
-  String get filterBy => 'Filter by:';
 
   @override
   String get alphabeticalOrder => 'Alphabetical Order';
@@ -215,13 +206,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get behavior => 'Behavior';
-
-  @override
-  String get showCompletedOnHome => 'Show completed on home';
-
-  @override
-  String get showCompletedOnHomeSubtitle =>
-      'Display watched titles on the main tab';
 
   @override
   String get backupSecurity => 'Data Security';

@@ -21,6 +21,13 @@ class SearchQuery extends _$SearchQuery {
 
 @riverpod
 class ActiveFilter extends _$ActiveFilter {
+  static const _empty = (
+    filter: FilterEnum.all,
+    category: CategoryEnum.absent,
+    streaming: StreamingEnum.absent,
+    access: AccessEnum.absent,
+  );
+
   @override
   ({
     FilterEnum filter,
@@ -28,19 +35,9 @@ class ActiveFilter extends _$ActiveFilter {
     StreamingEnum streaming,
     AccessEnum access,
   })
-  build() => (
-    filter: FilterEnum.all,
-    category: CategoryEnum.absent,
-    streaming: StreamingEnum.absent,
-    access: AccessEnum.absent,
-  );
+  build() => _empty;
 
-  void setAll() => state = (
-    filter: FilterEnum.all,
-    category: CategoryEnum.absent,
-    streaming: StreamingEnum.absent,
-    access: AccessEnum.absent,
-  );
+  void reset() => state = _empty;
 
   void setCategory(CategoryEnum category) => state = (
     filter: FilterEnum.category,
@@ -62,8 +59,6 @@ class ActiveFilter extends _$ActiveFilter {
     streaming: StreamingEnum.absent,
     access: access,
   );
-
-  void reset() => setAll();
 }
 
 @Riverpod(keepAlive: true)
